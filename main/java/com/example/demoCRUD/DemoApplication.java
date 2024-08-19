@@ -5,9 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@EnableJpaRepositories(basePackages = "com.example.demoCRUD.model")
 public class DemoApplication {
 
 	public static void main(String[] args) {
