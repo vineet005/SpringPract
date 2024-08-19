@@ -1,10 +1,13 @@
 package com.example.demoCRUD.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Engine {
     private String type;
 
-    public Engine(String type){
-        this.type = type;
+    public Engine(){
+        this.type = "V8"; //Default Type
     }
 
     public String getType() {
