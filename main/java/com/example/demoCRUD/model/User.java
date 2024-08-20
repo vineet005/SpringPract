@@ -2,8 +2,10 @@ package com.example.demoCRUD.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "People")
 public class User {
     @Id
     private Long Id;
