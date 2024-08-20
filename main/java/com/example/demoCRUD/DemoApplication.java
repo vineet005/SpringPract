@@ -1,20 +1,26 @@
 package com.example.demoCRUD;
 
 import com.example.demoCRUD.model.Car;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-public class DemoApplication {
+@ComponentScan(basePackages = "com.example.demoCRUD")
+public class DemoApplication implements CommandLineRunner {
+
+	@Autowired
+	private Car car;
 
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Car car = (Car)context.getBean("car");
-
-		car.display();
-
+		SpringApplication.run(DemoApplication.class, args);
 	}
 
+	@Override
+	public void run(String... args) throws Exception {
+		car.drive();
+	}
 }

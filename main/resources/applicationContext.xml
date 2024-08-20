@@ -1,0 +1,16 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+<!--http://www.springframework.org/schema/beans/spring-beans.xsd">-->
+
+<!--    &lt;!&ndash; Define the Engine bean &ndash;&gt;-->
+<!--    <bean id="engine" class="com.example.demoCRUD.model.Engine">-->
+<!--        <property value="V8" name="V8"/>-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash; Define the Car bean with constructor injection &ndash;&gt;-->
+<!--    <bean id="car" class="com.example.demoCRUD.model.Car">-->
+<!--        <constructor-arg ref="engine"/>-->
+<!--    </bean>-->
+<!--</beans>-->
